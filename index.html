@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" hreflang="hu" href="https://nadasjanos.github.io/">
+<link rel="alternate" hreflang="en" href="https://nadasjanos.github.io/en.html">
+<link rel="alternate" hreflang="de" href="https://nadasjanos.github.io/de.html">
 <title>Nádas János</title>
 <meta name="description" content="Nádas János gépészmérnök, minőségirányítási vezető (CQO) – kovácsolás és lemezsajtolás, ISO 9001, FMEA, SPC, UT2/PT2.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,6 +76,11 @@ nav a {
   text-transform: uppercase; color: var(--muted); text-decoration: none;
 }
 nav a:hover { color: var(--ink); }
+.lang-switch { display: inline-flex; gap: 2px; padding-left: 14px; border-left: 1px solid currentColor; }
+.lang-switch a { padding: 0 5px; border-bottom: 1.5px solid transparent; }
+.lang-switch a[aria-current="page"] { font-weight: 500; }
+.band .lang-switch { border-left-color: var(--band-line); }
+.band .lang-switch a[aria-current="page"] { color: var(--band-ink); border-bottom-color: #C9A85A; }
 
 /* ---------- Hero ---------- */
 .hero { padding-block: 48px 40px; }
@@ -325,6 +333,7 @@ img { max-width: 100%; }
       <a href="#kompetenciak">Kompetenciák</a>
       <a href="#kepzesek">Képzések</a>
       <a href="#kapcsolat">Kapcsolat</a>
+      <span class="lang-switch" aria-label="Nyelv"><a href="./" lang="hu" aria-current="page">HU</a><a href="en.html" lang="en">EN</a><a href="de.html" lang="de">DE</a></span>
     </nav>
   </div>
 </header>
