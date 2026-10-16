@@ -291,6 +291,10 @@ footer .contact-item .k, footer .copy { color: color-mix(in srgb, var(--bg) 65%,
 footer .copy { border-color: color-mix(in srgb, var(--bg) 35%, var(--ink)); }
 footer .copy:hover { color: var(--bg); border-color: var(--bg); }
 footer .contact { flex-direction: column; align-items: flex-start; gap: 8px; }
+footer .note {
+  display: block; margin-top: 10px; font-family: var(--font-body); font-weight: 400;
+  font-size: 16px; color: color-mix(in srgb, var(--bg) 72%, var(--ink));
+}
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
@@ -610,6 +614,7 @@ img { max-width: 100%; }
         <div class="lang">
           <div class="row"><b>Ungarisch</b><span>Muttersprache</span></div>
           <div class="row"><b>Englisch</b><span>Grund- bis Mittelstufe (pre-intermediate / intermediate), wird laufend ausgebaut</span></div>
+          <div class="row"><b>Kontakt</b><span>Ich bin auf Englisch erreichbar.</span></div>
           <div class="row"><b>Sonstiges</b><span>Führerschein Klasse B</span></div>
         </div>
       </div>
@@ -619,7 +624,7 @@ img { max-width: 100%; }
 
 <footer id="kapcsolat">
   <div class="wrap">
-    <p class="big">Sprechen wir über Qualität.</p>
+    <p class="big">Sprechen wir über Qualität.<span class="note">Ich bin auf Englisch erreichbar.</span></p>
     <div class="contact">
       <div class="contact-item"><span class="k">Tel.</span><span class="v">+36 20 386 0097</span><button class="copy" type="button" data-copy="+36203860097" id="copy-tel-foot">Kopieren</button></div>
       <div class="contact-item"><span class="k">E-Mail</span><span class="v">ndsjnk@gmail.com</span><button class="copy" type="button" data-copy="ndsjnk@gmail.com" id="copy-mail-foot">Kopieren</button></div>
