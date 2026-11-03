@@ -148,6 +148,19 @@ nav a:hover { color: var(--ink); }
 .band .copy:hover { color: var(--band-ink); border-color: var(--band-ink); }
 .band :focus-visible { outline-color: var(--band-ink); }
 .band .hero { padding-block: 64px 72px; }
+.contact a.v {
+  color: inherit; user-select: auto;
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+}
+.cv-btn {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 26px;
+  font-family: var(--font-mono); font-size: 12.5px; font-weight: 500;
+  letter-spacing: .05em; text-transform: uppercase; text-decoration: none;
+  padding: 11px 18px; border-radius: 3px;
+  background: #C9A85A; color: #0D1A2A;
+}
+.cv-btn:hover { background: #DCC07C; }
+.cv-btn span { font-size: 15px; line-height: 1; }
 @media (max-width: 700px) {
   .band {
     background:
@@ -306,6 +319,7 @@ footer .note {
   .skills, .two { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 560px) {
+  .lang-switch { border-left: 0; padding-left: 0; margin-left: -5px; }
   .hero { padding-block: 32px 32px; }
   .res { padding: 20px 14px 18px; }
   .res .num { font-size: 44px; }
@@ -346,10 +360,11 @@ img { max-width: 100%; }
       <h1>Nádas<br>János</h1>
       <div class="temper" aria-hidden="true"></div>
       <p class="role">Gépészmérnök <span>·</span> Minőségirányítási vezető (CQO)</p>
-      <p class="thesis">Tizenegy évig a gépek mellett dolgoztam – ma egy 8–10 fős minőségügyi csapatot vezetek ugyanebben az iparágban. A minőségi problémákat nemcsak az irodából, hanem a gyártósor felől is értem.</p>
+      <p class="thesis">Tizenegy évig a gépek mellett dolgoztam – ma egy 8–10 fős minőségügyi csapatot vezetek ugyanebben az iparágban. Ez a pálya adja a legnagyobb előnyömet: a minőségi problémákat nemcsak az irodából, hanem a gyártósor felől is értem.</p>
       <ul class="creds" aria-label="Képesítések">
         <li>ISO 9001:2015</li>
         <li>IATF 16949 / ISO 9001 auditor</li>
+        <li>PED 2014/68/EU · AD 2000</li>
         <li>UT2</li>
         <li>PT2</li>
         <li>FMEA · SPC · 8D</li>
@@ -358,7 +373,9 @@ img { max-width: 100%; }
         <div class="contact-item"><span class="k">Hely</span><span class="v">Budapest</span></div>
         <div class="contact-item"><span class="k">Tel.</span><span class="v">+36 20 386 0097</span><button class="copy" type="button" data-copy="+36203860097" id="copy-tel-top">Másol</button></div>
         <div class="contact-item"><span class="k">E-mail</span><span class="v">ndsjnk@gmail.com</span><button class="copy" type="button" data-copy="ndsjnk@gmail.com" id="copy-mail-top">Másol</button></div>
+        <div class="contact-item"><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/janos-nadas" target="_blank" rel="noopener">linkedin.com/in/janos-nadas</a></div>
       </div>
+      <a class="cv-btn" href="Nadas_Janos_CV.pdf" download><span aria-hidden="true">↓</span>Önéletrajz letöltése (PDF)</a>
     </div>
   </section>
 </div>
@@ -471,9 +488,13 @@ img { max-width: 100%; }
               <p class="org">Technokov Kovácsoló és Lemezsajtoló Kft.</p>
               <ul>
                 <li>ISO 9001:2015 szerinti QMS teljes körű fenntartása és fejlesztése termelő környezetben, napi kapcsolattartásban a gyártási területekkel</li>
+                <li>Vevői reklamációk kezelése és 8D riportok készítése – külföldi vevői reklamáció önálló kezelése angol nyelven</li>
                 <li>Gyártási veszteségek és nemmegfelelőségek gyökérok-elemzése (ember–gép–alapanyag–technológia szempontok mentén), selejtcsökkentési intézkedések kidolgozása</li>
-                <li>A reklamációk költsége 51%-kal, a belső nemmegfelelőségek darabszáma 33%-kal csökkent a rendszeres belső auditprogram és a strukturált reklamációkezelési folyamat eredményeként</li>
-                <li>Sikeres külső tanúsító audit – nulla kritikus nemmegfelelőség</li>
+                <li>A reklamációk költsége 51%-kal, a belső nemmegfelelőségek darabszáma 33%-kal csökkent a bevezetett rendszeres belső auditprogram és a strukturált reklamációkezelési folyamat eredményeként</li>
+                <li>Sikeres külső tanúsító audit lebonyolítása – nulla kritikus nemmegfelelőség</li>
+                <li>A PED 2014/68/EU irányelv és az AD 2000 előírásainak alkalmazása, a hegesztési személyi minősítések és eljárások kezelése</li>
+                <li>Új termékek bemintázásának vezetése (pl. vasúti fenékgyártás): gyártási rajz vevői elfogadtatása, kísérleti gyártás, első darab vevői átvétele</li>
+                <li>A mérőeszköz-felügyeleti rendszer kidolgozása és működtetése (kalibrálás, nyilvántartás)</li>
                 <li>Teljes QMS-dokumentációs felülvizsgálat: E-, U- és MK-sorozatú dokumentumok frissítése, kockázatelemzési és KPI-szekciók beillesztése</li>
                 <li>Havi vezetői jelentések és KPI-kimutatások a felső vezetés számára</li>
                 <li>A késésben lévő rendelések vezetői kimutatásának automatizálása: napi, emberi beavatkozás nélküli frissítés a Szilanus ERP-ből kinyert adatokkal</li>
@@ -523,45 +544,56 @@ img { max-width: 100%; }
       <div class="body">
         <div class="skills">
           <div class="skill">
-            <h4>Minőségirányítás és audit</h4>
+            <h4>Minőségirányítás és auditok</h4>
             <ul>
               <li>ISO 9001 minőségirányítási rendszer működtetése, utasítások és eljárások naprakészen tartása, fejlesztése</li>
-              <li>Belső auditok lebonyolítása, tanúsító és vevői auditok támogatása</li>
-              <li>Kooperációs folyamatok ellenőrzése, beszállítói audit</li>
-              <li>Reklamációkezelés</li>
-              <li>FMEA, SPC alkalmazása</li>
-              <li>KPI-kimutatás és -elemzés</li>
+              <li>Belső auditok lebonyolítása, tanúsító és vevői auditok előkészítése és támogatása</li>
+              <li>Beszállítói audit, kooperációs folyamatok ellenőrzése</li>
+              <li>PED 2014/68/EU és AD 2000 előírások alkalmazása; hegesztési személyi minősítések és eljárások kezelése</li>
               <li>Minőségügyi oktatások kidolgozása és megtartása</li>
             </ul>
           </div>
           <div class="skill">
-            <h4>Termékmegfelelőség és vizsgálat</h4>
+            <h4>Reklamáció és problémamegoldás</h4>
             <ul>
-              <li>Alapanyagok megfelelőségének vizsgálata, bizonylatellenőrzés, kémiai besorolhatóság</li>
-              <li>Gyártói bizonylatok validálása, termékmegfelelőség igazolása</li>
-              <li>Bizonylatok kiadása és ellenőrzése a vevők felé</li>
-              <li>Harmadik fél által tanúsított termékek átvételének lebonyolítása</li>
-              <li>Szakítóvizsgálat és Charpy-ütővizsgálat elvégzése és kiértékelése</li>
-              <li>Mintavételes darabok és gyártásközi vizsgálatok meghatározása</li>
-              <li>Dokumentálás és jóváhagyás, visszatartások elbírálása</li>
+              <li>Vevői reklamációk kezelése (külföldi vevővel angol nyelven is), 8D riportok készítése</li>
+              <li>Gyökérok-elemzés, javító intézkedések; FMEA, SPC alkalmazása</li>
+              <li>Nemmegfelelő termékek visszatartása és elbírálása, dokumentálás és jóváhagyás</li>
+              <li>KPI-kimutatás és -elemzés, havi nemmegfelelőségi kiértékelések</li>
             </ul>
           </div>
           <div class="skill">
-            <h4>Gyártás és technológia</h4>
+            <h4>Gyártástámogatás és bemintázás</h4>
             <ul>
               <li>Megrendelések ellenőrzése a kiadott technológia szerint, változáskezelés</li>
-              <li>Gyártási szabványok, követelmények értelmezése és alkalmazása</li>
-              <li>Technológiai utasítások, specifikációk ellenőrzése, kritikus pontok meghatározása</li>
-              <li>Kísérleti gyártás folyamatainak támogatása</li>
+              <li>Technológiai utasítások, specifikációk ellenőrzése, kritikus pontok meghatározása; gyártási szabványok alkalmazása</li>
+              <li>Bemintázás: gyártási rajz vevői elfogadtatása, kísérleti gyártás, első darab vevői átvétele; dokumentáció (rajzjóváhagyás, mérési jegyzőkönyv, anyagbizonylat)</li>
+              <li>Mintavételes darabok és gyártásközi vizsgálatok meghatározása</li>
             </ul>
           </div>
           <div class="skill">
-            <h4>Digitális eszközök és automatizálás</h4>
+            <h4>Vizsgálat, mérés, bizonylatolás</h4>
             <ul>
-              <li>Folyamat-automatizálás AI-támogatással: ERP-adatok kinyerése, Excel-kimutatások automatikus frissítése</li>
-              <li>AI-eszközök: Claude (Claude Code), ChatGPT, Canva, HeyGen</li>
-              <li>MS Office (Word, Excel, PowerPoint)</li>
+              <li>Alapanyagok megfelelőségének vizsgálata, bizonylatellenőrzés, kémiai besorolhatóság</li>
+              <li>Gyártói bizonylatok validálása, vevői bizonylatok kiadása; harmadik fél által tanúsított termékek átvétele</li>
+              <li>Szakító- és ütővizsgálat (Charpy); roncsolásmentes vizsgálat: UT2, PT2</li>
+              <li>Mérőeszköz-felügyeleti rendszer kidolgozása és működtetése (kalibrálás, nyilvántartás); mérés kézi mérőeszközökkel</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h4>Szoftverek és AI</h4>
+            <ul>
+              <li>MS Office (Word, Excel, PowerPoint); ERP-rendszer (Szilanus)</li>
               <li>CAD: AutoCAD, Solid Edge · CAM: EdgeCAM</li>
+              <li>AI-eszközök magabiztos használata: Claude (Claude Code), ChatGPT, Canva, HeyGen</li>
+              <li>Folyamat-automatizálás AI-támogatással: ERP-adatok kinyerése, Excel-kimutatások automatikus frissítése</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h4>Jogosítványok</h4>
+            <ul>
+              <li>B kategóriás jogosítvány</li>
+              <li>Targoncavezető és emelőgép-kezelő jogosítvány</li>
             </ul>
           </div>
         </div>
@@ -588,7 +620,7 @@ img { max-width: 100%; }
           <table>
             <thead><tr><th>Év</th><th>Képzés</th><th>Kiállító</th></tr></thead>
             <tbody>
-              <tr><td class="y">2026</td><td>AI-felhasználás tréning <span class="pill">folyamatban</span></td><td>Blue-Gap</td></tr>
+              <tr><td class="y">2026</td><td>AI-felhasználás tréning <span class="pill">folyamatban, 2026.12.16-ig</span></td><td>Blue-Gap</td></tr>
               <tr><td class="y">2025</td><td>IATF 16949 &amp; ISO 9001 belső és beszállítói auditor</td><td>Kvalikon</td></tr>
               <tr><td class="y">2024</td><td><span class="code">UT2</span> – Ultrahangos repedésvizsgálat</td><td>Hidra Felnőttképző</td></tr>
               <tr><td class="y">2023</td><td><span class="code">PT2</span> – Folyadékbehatolásos repedésvizsgálat</td><td>Hidra Felnőttképző</td></tr>
@@ -613,8 +645,7 @@ img { max-width: 100%; }
         </ul>
         <div class="lang">
           <div class="row"><b>Magyar</b><span>anyanyelv</span></div>
-          <div class="row"><b>Angol</b><span>alap-/középfok (pre-intermediate / intermediate), folyamatosan fejlesztem</span></div>
-          <div class="row"><b>Egyéb</b><span>B kategóriás jogosítvány</span></div>
+          <div class="row"><b>Angol</b><span>alap-/középfok (pre-intermediate / intermediate); vevői reklamációt önállóan kezeltem angolul</span></div>
         </div>
       </div>
     </div>
@@ -627,6 +658,7 @@ img { max-width: 100%; }
     <div class="contact">
       <div class="contact-item"><span class="k">Tel.</span><span class="v">+36 20 386 0097</span><button class="copy" type="button" data-copy="+36203860097" id="copy-tel-foot">Másol</button></div>
       <div class="contact-item"><span class="k">E-mail</span><span class="v">ndsjnk@gmail.com</span><button class="copy" type="button" data-copy="ndsjnk@gmail.com" id="copy-mail-foot">Másol</button></div>
+      <div class="contact-item"><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/janos-nadas" target="_blank" rel="noopener">linkedin.com/in/janos-nadas</a></div>
       <div class="contact-item"><span class="k">Hely</span><span class="v">Budapest</span></div>
     </div>
   </div>

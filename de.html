@@ -148,6 +148,19 @@ nav a:hover { color: var(--ink); }
 .band .copy:hover { color: var(--band-ink); border-color: var(--band-ink); }
 .band :focus-visible { outline-color: var(--band-ink); }
 .band .hero { padding-block: 64px 72px; }
+.contact a.v {
+  color: inherit; user-select: auto;
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+}
+.cv-btn {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 26px;
+  font-family: var(--font-mono); font-size: 12.5px; font-weight: 500;
+  letter-spacing: .05em; text-transform: uppercase; text-decoration: none;
+  padding: 11px 18px; border-radius: 3px;
+  background: #C9A85A; color: #0D1A2A;
+}
+.cv-btn:hover { background: #DCC07C; }
+.cv-btn span { font-size: 15px; line-height: 1; }
 @media (max-width: 700px) {
   .band {
     background:
@@ -306,6 +319,7 @@ footer .note {
   .skills, .two { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 560px) {
+  .lang-switch { border-left: 0; padding-left: 0; margin-left: -5px; }
   .hero { padding-block: 32px 32px; }
   .res { padding: 20px 14px 18px; }
   .res .num { font-size: 44px; }
@@ -346,10 +360,11 @@ img { max-width: 100%; }
       <h1>János<br>Nádas</h1>
       <div class="temper" aria-hidden="true"></div>
       <p class="role">Maschinenbauingenieur <span>·</span> Leiter Qualitätsmanagement (CQO)</p>
-      <p class="thesis">Elf Jahre lang habe ich an den Maschinen gearbeitet. Heute leite ich ein Qualitätsteam von 8–10 Personen in derselben Branche. Qualitätsprobleme verstehe ich nicht nur vom Büro aus, sondern aus der Sicht der Fertigung.</p>
+      <p class="thesis">Elf Jahre lang habe ich an den Maschinen gearbeitet. Heute leite ich ein Qualitätsteam von 8–10 Personen in derselben Branche. Dieser Weg ist mein größter Vorteil: Qualitätsprobleme verstehe ich nicht nur vom Büro aus, sondern aus der Sicht der Fertigung.</p>
       <ul class="creds" aria-label="Qualifikationen">
         <li>ISO 9001:2015</li>
         <li>IATF 16949 / ISO 9001 Auditor</li>
+        <li>PED 2014/68/EU · AD 2000</li>
         <li>UT2</li>
         <li>PT2</li>
         <li>FMEA · SPC · 8D</li>
@@ -358,7 +373,9 @@ img { max-width: 100%; }
         <div class="contact-item"><span class="k">Ort</span><span class="v">Budapest</span></div>
         <div class="contact-item"><span class="k">Tel.</span><span class="v">+36 20 386 0097</span><button class="copy" type="button" data-copy="+36203860097" id="copy-tel-top">Kopieren</button></div>
         <div class="contact-item"><span class="k">E-Mail</span><span class="v">ndsjnk@gmail.com</span><button class="copy" type="button" data-copy="ndsjnk@gmail.com" id="copy-mail-top">Kopieren</button></div>
+        <div class="contact-item"><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/janos-nadas" target="_blank" rel="noopener">linkedin.com/in/janos-nadas</a></div>
       </div>
+      <a class="cv-btn" href="Nadas_Janos_CV.pdf" download><span aria-hidden="true">↓</span>Lebenslauf herunterladen (PDF, auf Ungarisch)</a>
     </div>
   </section>
 </div>
@@ -471,9 +488,13 @@ img { max-width: 100%; }
               <p class="org">Technokov Kovácsoló és Lemezsajtoló Kft.</p>
               <ul>
                 <li>Vollständige Aufrechterhaltung und Weiterentwicklung des QMS nach ISO 9001:2015 in der Produktion, in täglichem Austausch mit den Fertigungsbereichen</li>
+                <li>Bearbeitung von Kundenreklamationen und Erstellung von 8D-Reports, darunter die eigenständige Bearbeitung einer Reklamation eines ausländischen Kunden auf Englisch</li>
                 <li>Ursachenanalyse von Fertigungsverlusten und Abweichungen (Mensch – Maschine – Material – Methode), Erarbeitung von Maßnahmen zur Ausschussreduzierung</li>
-                <li>Reklamationskosten um 51 % und interne Abweichungen um 33 % gesenkt – durch ein regelmäßiges internes Auditprogramm und einen strukturierten Reklamationsprozess</li>
-                <li>Erfolgreiches externes Zertifizierungsaudit ohne kritische Abweichung</li>
+                <li>Reklamationskosten um 51 % und interne Abweichungen um 33 % gesenkt – durch ein von mir eingeführtes regelmäßiges internes Auditprogramm und einen strukturierten Reklamationsprozess</li>
+                <li>Erfolgreiche Durchführung des externen Zertifizierungsaudits ohne kritische Abweichung</li>
+                <li>Anwendung der Druckgeräterichtlinie 2014/68/EU und des AD 2000-Regelwerks; Verwaltung von Schweißerqualifikationen und Schweißverfahren</li>
+                <li>Leitung der Bemusterung neuer Produkte (z. B. Behälterböden für den Schienenfahrzeugbau): Freigabe der Fertigungszeichnung durch den Kunden, Versuchsfertigung, Erstmusterabnahme durch den Kunden</li>
+                <li>Aufbau und Betrieb der Prüfmittelüberwachung (Kalibrierung, Prüfmittelverwaltung)</li>
                 <li>Vollständige Überarbeitung der QMS-Dokumentation: Aktualisierung der Dokumentenreihen E, U und MK, Ergänzung um Risikoanalyse- und KPI-Abschnitte</li>
                 <li>Monatliche Managementberichte und KPI-Auswertungen für die Geschäftsleitung</li>
                 <li>Automatisierung des Managementberichts über verspätete Aufträge: tägliche Aktualisierung ohne manuellen Eingriff mit Daten aus dem ERP-System Szilanus</li>
@@ -523,45 +544,56 @@ img { max-width: 100%; }
       <div class="body">
         <div class="skills">
           <div class="skill">
-            <h4>Qualitätsmanagement und Audit</h4>
+            <h4>Qualitätsmanagement und Audits</h4>
             <ul>
               <li>Betrieb des QM-Systems nach ISO 9001, Pflege und Weiterentwicklung von Anweisungen und Verfahren</li>
-              <li>Durchführung interner Audits, Unterstützung bei Zertifizierungs- und Kundenaudits</li>
-              <li>Überwachung von Fremdbearbeitung, Lieferantenaudits</li>
-              <li>Reklamationsmanagement</li>
-              <li>Anwendung von FMEA und SPC</li>
-              <li>KPI-Berichte und -Analyse</li>
+              <li>Durchführung interner Audits, Vorbereitung und Begleitung von Zertifizierungs- und Kundenaudits</li>
+              <li>Lieferantenaudits, Überwachung von Fremdbearbeitung</li>
+              <li>Anwendung von DGRL 2014/68/EU und AD 2000; Verwaltung von Schweißerqualifikationen und Schweißverfahren</li>
               <li>Konzeption und Durchführung von Qualitätsschulungen</li>
             </ul>
           </div>
           <div class="skill">
-            <h4>Produktkonformität und Prüfung</h4>
+            <h4>Reklamationen und Problemlösung</h4>
             <ul>
-              <li>Prüfung der Werkstoffkonformität, Prüfung von Bescheinigungen, Zuordnung der chemischen Zusammensetzung</li>
-              <li>Validierung von Herstellerbescheinigungen, Nachweis der Produktkonformität</li>
-              <li>Ausstellung und Prüfung von Bescheinigungen für Kunden</li>
-              <li>Abwicklung von Abnahmen durch Dritte (Drittabnahmen)</li>
-              <li>Durchführung und Auswertung von Zugversuchen und Kerbschlagbiegeversuchen nach Charpy</li>
-              <li>Festlegung von Stichprobenteilen und Zwischenprüfungen</li>
-              <li>Dokumentation und Freigabe, Bewertung gesperrter Ware</li>
+              <li>Bearbeitung von Kundenreklamationen (auch mit ausländischen Kunden auf Englisch), Erstellung von 8D-Reports</li>
+              <li>Ursachenanalyse, Korrekturmaßnahmen; Anwendung von FMEA und SPC</li>
+              <li>Sperrung und Bewertung fehlerhafter Produkte, Dokumentation und Freigabe</li>
+              <li>KPI-Berichte und -Analyse, monatliche Auswertung der Abweichungen</li>
             </ul>
           </div>
           <div class="skill">
-            <h4>Fertigung und Technologie</h4>
+            <h4>Fertigungsunterstützung und Bemusterung</h4>
             <ul>
               <li>Prüfung von Aufträgen anhand der freigegebenen Technologie, Änderungsmanagement</li>
-              <li>Auslegung und Anwendung von Fertigungsnormen und Anforderungen</li>
-              <li>Prüfung von Arbeitsanweisungen und Spezifikationen, Festlegung kritischer Punkte</li>
-              <li>Unterstützung der Versuchsfertigung</li>
+              <li>Prüfung von Arbeitsanweisungen und Spezifikationen, Festlegung kritischer Punkte; Anwendung von Fertigungsnormen</li>
+              <li>Bemusterung: Zeichnungsfreigabe durch den Kunden, Versuchsfertigung, Erstmusterabnahme; Dokumentation (Zeichnungsfreigabe, Messprotokoll, Werkstoffzeugnis)</li>
+              <li>Festlegung von Stichprobenteilen und Zwischenprüfungen</li>
             </ul>
           </div>
           <div class="skill">
-            <h4>Digitale Werkzeuge und Automatisierung</h4>
+            <h4>Prüfung, Messung, Bescheinigungen</h4>
             <ul>
-              <li>KI-gestützte Prozessautomatisierung: ERP-Datenextraktion, automatische Aktualisierung von Excel-Berichten</li>
-              <li>KI-Werkzeuge: Claude (Claude Code), ChatGPT, Canva, HeyGen</li>
-              <li>MS Office (Word, Excel, PowerPoint)</li>
+              <li>Prüfung der Werkstoffkonformität, Prüfung von Bescheinigungen, Zuordnung der chemischen Zusammensetzung</li>
+              <li>Validierung von Herstellerbescheinigungen, Ausstellung von Kundenbescheinigungen; Abnahme drittzertifizierter Produkte</li>
+              <li>Zugversuch und Kerbschlagbiegeversuch (Charpy); zerstörungsfreie Prüfung: UT2, PT2</li>
+              <li>Aufbau und Betrieb der Prüfmittelüberwachung (Kalibrierung, Prüfmittelverwaltung); Messen mit Handmessmitteln</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h4>Software und KI</h4>
+            <ul>
+              <li>MS Office (Word, Excel, PowerPoint); ERP-System (Szilanus)</li>
               <li>CAD: AutoCAD, Solid Edge · CAM: EdgeCAM</li>
+              <li>Sicherer Umgang mit KI-Werkzeugen: Claude (Claude Code), ChatGPT, Canva, HeyGen</li>
+              <li>KI-gestützte Prozessautomatisierung: ERP-Datenextraktion, automatische Aktualisierung von Excel-Berichten</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h4>Berechtigungen</h4>
+            <ul>
+              <li>Führerschein Klasse B</li>
+              <li>Gabelstapler- und Hebezeugschein</li>
             </ul>
           </div>
         </div>
@@ -588,7 +620,7 @@ img { max-width: 100%; }
           <table>
             <thead><tr><th>Jahr</th><th>Schulung</th><th>Anbieter</th></tr></thead>
             <tbody>
-              <tr><td class="y">2026</td><td>Schulung KI-Anwendung <span class="pill">laufend</span></td><td>Blue-Gap</td></tr>
+              <tr><td class="y">2026</td><td>Schulung KI-Anwendung <span class="pill">laufend, bis 16.12.2026</span></td><td>Blue-Gap</td></tr>
               <tr><td class="y">2025</td><td>IATF 16949 &amp; ISO 9001 interner Auditor und Lieferantenauditor</td><td>Kvalikon</td></tr>
               <tr><td class="y">2024</td><td><span class="code">UT2</span> – Ultraschallprüfung</td><td>Hidra Felnőttképző</td></tr>
               <tr><td class="y">2023</td><td><span class="code">PT2</span> – Eindringprüfung</td><td>Hidra Felnőttképző</td></tr>
@@ -613,9 +645,8 @@ img { max-width: 100%; }
         </ul>
         <div class="lang">
           <div class="row"><b>Ungarisch</b><span>Muttersprache</span></div>
-          <div class="row"><b>Englisch</b><span>Grund- bis Mittelstufe (pre-intermediate / intermediate), wird laufend ausgebaut</span></div>
+          <div class="row"><b>Englisch</b><span>Grund- bis Mittelstufe (pre-intermediate / intermediate); Kundenreklamation eigenständig auf Englisch bearbeitet</span></div>
           <div class="row"><b>Kontakt</b><span>Ich bin auf Englisch erreichbar.</span></div>
-          <div class="row"><b>Sonstiges</b><span>Führerschein Klasse B</span></div>
         </div>
       </div>
     </div>
@@ -628,6 +659,7 @@ img { max-width: 100%; }
     <div class="contact">
       <div class="contact-item"><span class="k">Tel.</span><span class="v">+36 20 386 0097</span><button class="copy" type="button" data-copy="+36203860097" id="copy-tel-foot">Kopieren</button></div>
       <div class="contact-item"><span class="k">E-Mail</span><span class="v">ndsjnk@gmail.com</span><button class="copy" type="button" data-copy="ndsjnk@gmail.com" id="copy-mail-foot">Kopieren</button></div>
+      <div class="contact-item"><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/janos-nadas" target="_blank" rel="noopener">linkedin.com/in/janos-nadas</a></div>
       <div class="contact-item"><span class="k">Ort</span><span class="v">Budapest</span></div>
     </div>
   </div>

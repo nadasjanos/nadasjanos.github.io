@@ -148,6 +148,19 @@ nav a:hover { color: var(--ink); }
 .band .copy:hover { color: var(--band-ink); border-color: var(--band-ink); }
 .band :focus-visible { outline-color: var(--band-ink); }
 .band .hero { padding-block: 64px 72px; }
+.contact a.v {
+  color: inherit; user-select: auto;
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+}
+.cv-btn {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 26px;
+  font-family: var(--font-mono); font-size: 12.5px; font-weight: 500;
+  letter-spacing: .05em; text-transform: uppercase; text-decoration: none;
+  padding: 11px 18px; border-radius: 3px;
+  background: #C9A85A; color: #0D1A2A;
+}
+.cv-btn:hover { background: #DCC07C; }
+.cv-btn span { font-size: 15px; line-height: 1; }
 @media (max-width: 700px) {
   .band {
     background:
@@ -306,6 +319,7 @@ footer .note {
   .skills, .two { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 560px) {
+  .lang-switch { border-left: 0; padding-left: 0; margin-left: -5px; }
   .hero { padding-block: 32px 32px; }
   .res { padding: 20px 14px 18px; }
   .res .num { font-size: 44px; }
@@ -346,10 +360,11 @@ img { max-width: 100%; }
       <h1>János<br>Nádas</h1>
       <div class="temper" aria-hidden="true"></div>
       <p class="role">Mechanical Engineer <span>·</span> Chief Quality Officer (CQO)</p>
-      <p class="thesis">I spent eleven years working on the machines. Today I lead a quality team of 8–10 people in the same industry. I understand quality problems not only from the office but from the shop floor.</p>
+      <p class="thesis">I spent eleven years working on the machines. Today I lead a quality team of 8–10 people in the same industry. That path is my biggest advantage: I understand quality problems not only from the office but from the shop floor.</p>
       <ul class="creds" aria-label="Qualifications">
         <li>ISO 9001:2015</li>
         <li>IATF 16949 / ISO 9001 auditor</li>
+        <li>PED 2014/68/EU · AD 2000</li>
         <li>UT2</li>
         <li>PT2</li>
         <li>FMEA · SPC · 8D</li>
@@ -358,7 +373,9 @@ img { max-width: 100%; }
         <div class="contact-item"><span class="k">Location</span><span class="v">Budapest</span></div>
         <div class="contact-item"><span class="k">Phone</span><span class="v">+36 20 386 0097</span><button class="copy" type="button" data-copy="+36203860097" id="copy-tel-top">Copy</button></div>
         <div class="contact-item"><span class="k">E-mail</span><span class="v">ndsjnk@gmail.com</span><button class="copy" type="button" data-copy="ndsjnk@gmail.com" id="copy-mail-top">Copy</button></div>
+        <div class="contact-item"><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/janos-nadas" target="_blank" rel="noopener">linkedin.com/in/janos-nadas</a></div>
       </div>
+      <a class="cv-btn" href="Nadas_Janos_CV.pdf" download><span aria-hidden="true">↓</span>Download CV (PDF, in Hungarian)</a>
     </div>
   </section>
 </div>
@@ -471,9 +488,13 @@ img { max-width: 100%; }
               <p class="org">Technokov Kovácsoló és Lemezsajtoló Kft.</p>
               <ul>
                 <li>Full maintenance and development of the ISO 9001:2015 QMS in a production environment, in daily contact with the production areas</li>
+                <li>Handling customer complaints and writing 8D reports, including independently handling a foreign customer’s complaint in English</li>
                 <li>Root cause analysis of production losses and nonconformities (man – machine – material – method), developing scrap reduction actions</li>
-                <li>Customer complaint costs down 51% and internal nonconformities down 33%, as a result of a regular internal audit programme and a structured complaint handling process</li>
-                <li>Successful external certification audit with zero critical nonconformities</li>
+                <li>Customer complaint costs down 51% and internal nonconformities down 33%, as a result of the regular internal audit programme I introduced and a structured complaint handling process</li>
+                <li>Led a successful external certification audit with zero critical nonconformities</li>
+                <li>Applying the Pressure Equipment Directive 2014/68/EU and AD 2000 requirements; managing welder qualifications and welding procedures</li>
+                <li>Leading first-article sampling of new products (e.g. dished ends for railway applications): customer approval of the production drawing, trial production, customer acceptance of the first article</li>
+                <li>Developing and running the measuring equipment control system (calibration, gauge register)</li>
                 <li>Complete QMS documentation review: updating the E, U and MK document series, adding risk analysis and KPI sections</li>
                 <li>Monthly management reports and KPI dashboards for senior management</li>
                 <li>Automated the management report on late orders: daily refresh with no manual intervention, using data extracted from the Szilanus ERP</li>
@@ -523,45 +544,56 @@ img { max-width: 100%; }
       <div class="body">
         <div class="skills">
           <div class="skill">
-            <h4>Quality management and auditing</h4>
+            <h4>Quality management and audits</h4>
             <ul>
               <li>Running the ISO 9001 quality management system; keeping instructions and procedures up to date and improving them</li>
-              <li>Conducting internal audits, supporting certification and customer audits</li>
-              <li>Checking subcontracted processes, supplier audits</li>
-              <li>Customer complaint handling</li>
-              <li>Applying FMEA and SPC</li>
-              <li>KPI reporting and analysis</li>
+              <li>Conducting internal audits; preparing and supporting certification and customer audits</li>
+              <li>Supplier audits, checking subcontracted processes</li>
+              <li>Applying PED 2014/68/EU and AD 2000; managing welder qualifications and welding procedures</li>
               <li>Developing and delivering quality training</li>
             </ul>
           </div>
           <div class="skill">
-            <h4>Product conformity and testing</h4>
+            <h4>Complaints and problem solving</h4>
             <ul>
-              <li>Checking raw material conformity, certificate review, chemical composition classification</li>
-              <li>Validating manufacturer certificates, demonstrating product conformity</li>
-              <li>Issuing and checking certificates for customers</li>
-              <li>Managing acceptance of third-party certified products</li>
-              <li>Performing and evaluating tensile tests and Charpy impact tests</li>
-              <li>Defining sample parts and in-process inspections</li>
-              <li>Documentation and approval, disposition of held parts</li>
+              <li>Handling customer complaints (also with foreign customers, in English), writing 8D reports</li>
+              <li>Root cause analysis, corrective actions; applying FMEA and SPC</li>
+              <li>Holding and dispositioning nonconforming products, documentation and approval</li>
+              <li>KPI reporting and analysis, monthly nonconformity reviews</li>
             </ul>
           </div>
           <div class="skill">
-            <h4>Manufacturing and technology</h4>
+            <h4>Production support and first-article sampling</h4>
             <ul>
               <li>Checking orders against the released process plan, change management</li>
-              <li>Interpreting and applying manufacturing standards and requirements</li>
-              <li>Reviewing work instructions and specifications, defining critical points</li>
-              <li>Supporting trial production</li>
+              <li>Reviewing work instructions and specifications, defining critical points; applying manufacturing standards</li>
+              <li>First-article sampling: customer drawing approval, trial production, customer first-article acceptance; documentation (drawing approval, measurement report, material certificates)</li>
+              <li>Defining sample parts and in-process inspections</li>
             </ul>
           </div>
           <div class="skill">
-            <h4>Digital tools and automation</h4>
+            <h4>Testing, measurement and certification</h4>
             <ul>
-              <li>AI-assisted process automation: extracting ERP data, auto-refreshing Excel reports</li>
-              <li>AI tools: Claude (Claude Code), ChatGPT, Canva, HeyGen</li>
-              <li>MS Office (Word, Excel, PowerPoint)</li>
+              <li>Checking raw material conformity, certificate review, chemical composition classification</li>
+              <li>Validating manufacturer certificates, issuing customer certificates; acceptance of third-party certified products</li>
+              <li>Tensile and Charpy impact testing; non-destructive testing: UT2, PT2</li>
+              <li>Developing and running the measuring equipment control system (calibration, register); measuring with hand measuring tools</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h4>Software and AI</h4>
+            <ul>
+              <li>MS Office (Word, Excel, PowerPoint); ERP system (Szilanus)</li>
               <li>CAD: AutoCAD, Solid Edge · CAM: EdgeCAM</li>
+              <li>Confident use of AI tools: Claude (Claude Code), ChatGPT, Canva, HeyGen</li>
+              <li>AI-assisted process automation: extracting ERP data, auto-refreshing Excel reports</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h4>Licences</h4>
+            <ul>
+              <li>Driving licence, category B</li>
+              <li>Forklift and lifting equipment operator licences</li>
             </ul>
           </div>
         </div>
@@ -588,7 +620,7 @@ img { max-width: 100%; }
           <table>
             <thead><tr><th>Year</th><th>Course</th><th>Issuer</th></tr></thead>
             <tbody>
-              <tr><td class="y">2026</td><td>AI usage training <span class="pill">in progress</span></td><td>Blue-Gap</td></tr>
+              <tr><td class="y">2026</td><td>AI usage training <span class="pill">in progress, until 16 Dec 2026</span></td><td>Blue-Gap</td></tr>
               <tr><td class="y">2025</td><td>IATF 16949 &amp; ISO 9001 internal and supplier auditor</td><td>Kvalikon</td></tr>
               <tr><td class="y">2024</td><td><span class="code">UT2</span> – Ultrasonic testing</td><td>Hidra Felnőttképző</td></tr>
               <tr><td class="y">2023</td><td><span class="code">PT2</span> – Liquid penetrant testing</td><td>Hidra Felnőttképző</td></tr>
@@ -613,8 +645,7 @@ img { max-width: 100%; }
         </ul>
         <div class="lang">
           <div class="row"><b>Hungarian</b><span>native</span></div>
-          <div class="row"><b>English</b><span>pre-intermediate / intermediate, continuously improving</span></div>
-          <div class="row"><b>Other</b><span>Driving licence, category B</span></div>
+          <div class="row"><b>English</b><span>pre-intermediate / intermediate; I have handled a customer complaint independently in English</span></div>
         </div>
       </div>
     </div>
@@ -627,6 +658,7 @@ img { max-width: 100%; }
     <div class="contact">
       <div class="contact-item"><span class="k">Phone</span><span class="v">+36 20 386 0097</span><button class="copy" type="button" data-copy="+36203860097" id="copy-tel-foot">Copy</button></div>
       <div class="contact-item"><span class="k">E-mail</span><span class="v">ndsjnk@gmail.com</span><button class="copy" type="button" data-copy="ndsjnk@gmail.com" id="copy-mail-foot">Copy</button></div>
+      <div class="contact-item"><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/janos-nadas" target="_blank" rel="noopener">linkedin.com/in/janos-nadas</a></div>
       <div class="contact-item"><span class="k">Location</span><span class="v">Budapest</span></div>
     </div>
   </div>
